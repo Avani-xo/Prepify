@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prepify - Student Interview Preparation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="#" class="logo-link">
+            <div class="logo">
+              <i class="fas fa-graduation-cap"></i>
+              <h1>Prepify</h1>
+            </div>
+          </a>
+        </div>
+        <div class="navbar-toggle" id="navbar-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="navbar-menu" id="navbar-menu">
+          <ul class="navbar-links">
+            <li><a href="#" class="nav-link active">Home</a></li>
+            <li><a href="#features" class="nav-link">Features</a></li>
+            <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+            <li><a href="#app" class="nav-link">Start Prep</a></li>
+          </ul>
+          <div class="theme-toggle">
+            <input type="checkbox" id="theme-switch" class="theme-switch">
+            <label for="theme-switch" class="theme-switch-label">
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Landing Page -->
+      <section id="landing-page" class="screen active">
+        <div class="hero-section">
+          <div class="hero-content">
+            <h1>Prepare for Success with <span class="highlight">Prepify</span></h1>
+            <p class="hero-tagline">Your AI-powered interview preparation assistant that generates personalized questions, evaluates your answers, and helps you improve.</p>
+            <div class="hero-buttons">
+              <button id="get-started-btn" class="primary-btn"><i class="fas fa-rocket"></i> Get Started</button>
+              <a href="#features" class="secondary-btn"><i class="fas fa-info-circle"></i> Learn More</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Student preparing for interview">
+          </div>
+        </div>
+
+        <div id="features" class="features-section">
+          <h2 class="section-title">Key Features</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h3>AI-Generated Questions</h3>
+              <p>Get tailored interview questions based on your selected topics and preferences.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-comment-dots"></i>
+              </div>
+              <h3>Real-time Feedback</h3>
+              <p>Receive instant evaluations and constructive feedback on your answers.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3>Performance Analytics</h3>
+              <p>Track your progress with comprehensive performance reports and insights.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3>Programming Challenges</h3>
+              <p>Practice with technical programming questions for tech interviews.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="how-it-works" class="how-it-works-section">
+          <h2 class="section-title">How It Works</h2>
+          <div class="steps-container">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Select Topics</h3>
+                <p>Choose topics relevant to your interview from our extensive library or add custom topics.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Generate Questions</h3>
+                <p>Our AI creates personalized interview questions based on your selections.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Practice Answering</h3>
+                <p>Take your time to formulate thoughtful responses to each question.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h3>Get Feedback</h3>
+                <p>Receive detailed feedback and scoring to identify areas for improvement.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">5</div>
+              <div class="step-content">
+                <h3>Review Performance</h3>
+                <p>Analyze your overall performance with comprehensive analytics and insights.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cta-container">
+            <button id="start-now-btn" class="primary-btn"><i class="fas fa-play"></i> Start Now</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Setup Screen -->
+      <section id="setup-screen" class="screen">
+        <div class="card">
+          <h2>Create Your Interview Session</h2>
+          
+          <div class="form-group">
+            <label for="topics">Select Topics</label>
+            <div class="topic-selection">
+              <div class="topic-tags">
+                <!-- Topics will be added dynamically -->
+              </div>
+              <div class="topic-input-container">
+                <input type="text" id="topic-input" placeholder="Type a topic and press Enter">
+                <button id="add-topic-btn"><i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Question Type</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="question-type" value="theory" checked>
+                <span class="radio-label">Theory</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="question-type" value="programming">
+                <span class="radio-label">Programming</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="question-type" value="mixed">
+                <span class="radio-label">Mixed</span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Difficulty Level</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="difficulty-level" value="mixed" checked>
+                <span class="radio-label">Mixed</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="difficulty-level" value="easy">
+                <span class="radio-label">Easy</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="difficulty-level" value="medium">
+                <span class="radio-label">Medium</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="difficulty-level" value="hard">
+                <span class="radio-label">Hard</span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="question-count">Number of Questions</label>
+            <input type="range" id="question-count" min="1" max="50" value="5">
+            <div class="question-count-container">
+              <span id="question-count-display">5</span>
+              <input type="number" id="question-count-input" min="1" max="100" value="5">
+            </div>
+          </div>
+          
+          <button id="start-interview-btn" class="primary-btn"><i class="fas fa-play"></i> Start Interview</button>
+        </div>
+        
+        <div class="card info-card">
+          <h3>How It Works</h3>
+          <ul class="feature-list">
+            <li><i class="fas fa-check-circle"></i> Select topics relevant to your interview</li>
+            <li><i class="fas fa-check-circle"></i> Choose question type (theory, programming, or mixed)</li>
+            <li><i class="fas fa-check-circle"></i> AI generates interview questions tailored to your needs</li>
+            <li><i class="fas fa-check-circle"></i> Answer questions and receive detailed feedback</li>
+            <li><i class="fas fa-check-circle"></i> Review your performance with comprehensive analytics</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Loading Screen -->
+      <section id="loading-screen" class="screen">
+        <div class="loading-container">
+          <div class="loader"></div>
+          <p id="loading-message">Generating your personalized interview questions...</p>
+        </div>
+      </section>
+
+      <!-- Interview Screen -->
+      <section id="interview-screen" class="screen">
+        <div class="interview-header">
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+            <div class="progress-text">Question <span id="current-question">1</span> of <span id="total-questions">5</span></div>
+          </div>
+          <div class="timer">
+            <i class="fas fa-clock"></i>
+            <span id="timer-display">00:00</span>
+          </div>
+        </div>
+
+        <div class="interview-content">
+          <div class="question-card">
+            <div class="question-meta">
+              <span class="topic-tag" id="question-topic">Data Structures</span>
+              <span class="difficulty-tag" id="question-difficulty" data-difficulty="medium">Medium</span>
+            </div>
+            <h3 id="question-text">Loading question...</h3>
+          </div>
+
+          <div class="answer-section">
+            <textarea id="answer-input" placeholder="Type your answer here..."></textarea>
+            <div class="answer-actions">
+              <button id="submit-answer-btn" class="primary-btn"><i class="fas fa-paper-plane"></i> Submit Answer</button>
+              <button id="skip-question-btn" class="secondary-btn"><i class="fas fa-forward"></i> Skip Question</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feedback Screen -->
+      <section id="feedback-screen" class="screen">
+        <div class="feedback-header">
+          <button id="back-to-interview-btn" class="icon-btn"><i class="fas fa-arrow-left"></i> Back to Interview</button>
+        </div>
+
+        <div class="feedback-content">
+          <div class="question-review">
+            <h3>Question:</h3>
+            <p id="review-question-text"></p>
+            <div class="question-meta">
+              <span class="topic-tag" id="review-question-topic"></span>
+              <span class="difficulty-tag" id="review-question-difficulty"></span>
+            </div>
+          </div>
+
+          <div class="answer-review">
+            <h3>Your Answer:</h3>
+            <div id="review-user-answer"></div>
+          </div>
+
+          <div class="feedback-details">
+            <div class="score-card">
+              <h3>Score</h3>
+              <div class="score-circle">
+                <span id="score-value">0</span><span>/10</span>
+              </div>
+            </div>
+
+            <div class="feedback-text">
+              <h3>Feedback</h3>
+              <div id="feedback-content"></div>
+            </div>
+
+            <div class="suggestions">
+              <h3>Suggestions for Improvement</h3>
+              <div id="suggestions-content"></div>
+            </div>
+          </div>
+
+          <div class="feedback-actions">
+            <button id="next-question-btn" class="primary-btn"><i class="fas fa-arrow-right"></i> Next Question</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results Screen -->
+      <section id="results-screen" class="screen">
+        <div class="results-header">
+          <h2>Interview Performance Summary</h2>
+          <button id="restart-btn" class="secondary-btn"><i class="fas fa-redo"></i> Start New Interview</button>
+        </div>
+
+        <div class="results-content">
+          <div class="results-overview">
+            <div class="stat-card">
+              <h3>Overall Score</h3>
+              <div class="score-display">
+                <span id="overall-score">0</span><span>/10</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <h3>Questions Answered</h3>
+              <div class="count-display" id="questions-answered">0/0</div>
+            </div>
+            <div class="stat-card">
+              <h3>Average Time per Question</h3>
+              <div class="time-display" id="avg-time">00:00</div>
+            </div>
+          </div>
+
+          <div class="results-charts">
+            <div class="chart-container">
+              <h3>Performance by Topic</h3>
+              <canvas id="topic-chart"></canvas>
+            </div>
+            <div class="chart-container">
+              <h3>Performance by Difficulty</h3>
+              <canvas id="difficulty-chart"></canvas>
+            </div>
+          </div>
+
+          <div class="results-questions">
+            <h3>Question Review</h3>
+            <div id="question-list">
+              <!-- Question items will be added dynamically -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <h2>Prepify</h2>
+          </div>
+          <p>Your AI-powered interview preparation assistant</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#app">Start Prep</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+              <li><a href="#"><i class="fas fa-envelope"></i> support@prepify.com</a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i> @prepify</a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i> Prepify</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Prepify - AI-Powered Interview Preparation</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html> 
